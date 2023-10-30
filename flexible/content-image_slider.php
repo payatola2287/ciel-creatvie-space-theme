@@ -73,7 +73,11 @@ $content_button = get_sub_field('content_button');
                 <?php if($make_entire_slide_clickable && $slide_link) { ?>
                   <a href="<?php echo $slide_link['url']; ?>" target="<?php echo $slide_link['target']; ?>">
                 <?php } ?>
-                <img src="<?php echo $image ?>" />
+                <?php if( is_array( $image ) ): ?>
+                  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                <?php else: ?>
+                  <img src="<?php echo $image ?>" />
+                <?php endif; ?>
                 <?php if($make_entire_slide_clickable) { ?>
                   </a>
                 <?php } ?>
