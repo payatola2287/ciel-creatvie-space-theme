@@ -123,7 +123,7 @@ $body_classes = implode(' ', $body_classes);
 			<?php } ?>
 			<div class="container big_container">
 				<div class="site_header__inner">
-					<div class="site_header__toggle__open"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/menu.svg" /></div>
+					<div class="site_header__toggle__open"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/menu.svg" alt="Menu Toggle" /></div>
 					<div class="site_header__logo"><?php the_custom_logo();  ?> </div>
 						<div class="site_cta">
 						<?php if ($header_link_secondary && $header_link_secondary['url'] && $header_link_secondary['title'] && $header_link_secondary['target']) :
