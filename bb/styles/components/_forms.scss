@@ -1,0 +1,80 @@
+.page-form {
+
+  .entry-header {
+    h1 {
+      text-align: center;
+      font-family: 'Lust-Regular';
+      color: #000;
+    }
+  }
+
+  .form_shortcode {
+    max-width: 700px;
+    margin: 0 auto;
+    // background-color: #000;
+    // color: #fff;
+
+    .gform_title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    input[type="text"] {
+      padding: 0 !important;
+    }
+
+    textarea {
+      border: 1px solid #000 !important;
+    }
+
+    .gform_wrapper.gravity-theme .gfield input, .gform_wrapper.gravity-theme .gfield select {
+      border: none;
+      font-size: 20px;
+      padding: 0;
+      font-family: BrandonGrotesque-Medium;
+    }
+
+    .source select {
+      border-bottom: 1px solid #000 !important;
+    }
+
+    .validation_message {
+      text-align: center;
+    }
+
+    .gform_footer {
+      padding-top: 25px !important;
+
+      input[type="submit"] {
+        cursor: pointer;
+      }
+    }
+
+    .gravirty_form_section .gform_wrapper form .gform_body .gform_fields .gfield .ginput_container.ginput_container_checkbox .gfield_checkbox {
+      display: block;  
+
+      label {
+        height: auto !important;
+      }
+    }
+
+    .gravirty_form_section .gform_wrapper form .gform_body .gform_fields .gfield .ginput_container.ginput_container_checkbox .gfield_checkbox .gchoice {
+      width: 100% !important;
+    }
+
+    .gravirty_form_section .gform_wrapper form .gform_body .gform_fields .gfield {
+      &.gf_left_half {
+        width: 50%;
+        float: left;
+      }
+      &.gf_right_half {
+        width: 50%;
+        float: left;
+      }
+    }
+  }
+
+  .gravirty_form_section .gform_wrapper form .gform_body .gform_fields .gfield .gfield_label .gfield_required {
+    display: inline;
+  }
+}
