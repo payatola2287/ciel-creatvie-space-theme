@@ -148,12 +148,12 @@ function ciel_scripts() {
 	wp_enqueue_style( 'ciel-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'ciel-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'ciel-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'ciel-navigation', get_template_directory_uri() . '/js/navigation.min.js', array('jquery'), _S_VERSION, true );
 	wp_enqueue_script( 'ciel-js', get_template_directory_uri() . '/dist/js/js.js', array('jquery'), _S_VERSION, true );
 	
 	wp_enqueue_style( 'ciel-site', get_template_directory_uri() . '/dist/css/site.css',false,_S_VERSION,'all');
 
-	wp_enqueue_style( 'ciel-bb-styles', get_template_directory_uri() . '/bb/styles/bb.css', false, $cache_buster, 'all');
+	wp_enqueue_style( 'ciel-bb-styles', get_template_directory_uri() . '/bb/styles/bb.min.css', false, $cache_buster, 'all');
 	wp_enqueue_script( 'ciel-bb-scripts', get_template_directory_uri() . '/bb/scripts/bb-min.js', false, $cache_buster, 'all');
 
 	/* if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
