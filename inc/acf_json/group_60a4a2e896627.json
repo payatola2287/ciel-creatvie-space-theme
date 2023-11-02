@@ -3625,12 +3625,11 @@
         "comments",
         "revisions",
         "slug",
-        "page_attributes",
         "tags",
         "send-trackbacks"
     ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1698701687
+    "modified": 1698872962
 }

@@ -66,5 +66,18 @@ const clickFirstLink = (e) => {
     if(window.location.hash === '#book') {
       $('[data-action="modal--open"]')[0].click();
     }
+    
+    setTimeout(() => {
+      $('.page-template-unspan-template .content-text').addClass( 'open' );
+      $('.page-template-unspan-template .overlay').click(function(){
+        $content_text = $(this);
+        $content_text.animate({
+          opacity: 0
+        }, 1000,function(){
+          $content_text.remove();
+        });
+      });
+      
+    }, 500);
   });
 })(window.jQuery);

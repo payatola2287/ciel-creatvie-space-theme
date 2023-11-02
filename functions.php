@@ -144,7 +144,6 @@ function ciel_widgets_init() {
 function ciel_scripts() {
 	$theme_data = wp_get_theme();
 	$cache_buster = $theme_data->get('Version');
-
 	wp_enqueue_style( 'ciel-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'ciel-style', 'rtl', 'replace' );
 
