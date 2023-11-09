@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( '_S_VERSION', '1.2.5' );
 }
 
 if ( ! function_exists( 'ciel_setup' ) ) :
@@ -148,7 +148,7 @@ function ciel_scripts() {
 	wp_style_add_data( 'ciel-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'ciel-navigation', get_template_directory_uri() . '/js/navigation.min.js', array('jquery'), _S_VERSION, true );
-	wp_enqueue_script( 'ciel-js', get_template_directory_uri() . '/dist/js/js.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'ciel-js', get_template_directory_uri() . '/dist/js/js.min.js', array('jquery'), _S_VERSION, true );
 	
 	wp_enqueue_style( 'ciel-site', get_template_directory_uri() . '/dist/css/site.css',false,_S_VERSION,'all');
 
