@@ -2,7 +2,50 @@
   max-width: 100vw;
   overflow: hidden;
 }
-
+.update_slider .upcoming_event__item__details .text,
+p{
+  font-family: 'BrandonGrotesque-Medium', sans-serif !important;
+}
+.video-section{
+  .text{
+    font-family: 'BrandonGrotesque-Medium', sans-serif !important;
+    line-height: 1.5;
+  }
+}
+.logo-main{
+  .logo-group{
+    p{
+      font-family: 'BrandonGrotesque-Medium', sans-serif !important;
+      line-height: 1.5;
+    }
+  }
+}
+.about-image{
+  .colmn-img{
+    img{
+      max-width: 100%;
+    }
+  }
+}
+.testimonial-main{
+  .container-box{
+    .text-box{
+      p{
+        font-family: 'BrandonGrotesque-Medium', sans-serif !important;
+          line-height: 1.5;
+      }
+     } 
+  }
+}
+.team-main {
+  .team__grid__item{
+    .text-both{
+      p{
+        font-family: 'BrandonGrotesque-Medium', sans-serif !important;
+      }
+    }
+  }
+}
 .image-section .image-slider .item .item-inner .image {
   aspect-ratio: 1.5/1;
 }
@@ -126,6 +169,16 @@ body.post-type-archive-studios {
     right: -15px
   }
 }
+.promobar{
+  .item{
+    p{
+      font-family: 'BrandonGrotesque-Medium', sans-serif !important;
+      span,a{
+        font-family: inherit;
+      }
+    }
+  } 
+}
 
 @media screen and (max-width: 700px) {
   .site_cta {
@@ -166,13 +219,25 @@ body:not(.home) main.site-main {
   font-family: var(--font__body--fontFamily);
   max-width: 650px;
   margin: 0 auto;
-  
+  font-size: 4vw;
+  line-height: 1.5;
+  @media (min-width: 1400px){
+    font-size: 25px;
+  }
   h1, h2, h3, h4, h5, h6 {
     font-family: inherit;
     line-height: 1.25em;
     max-width: 35ch;
     margin-left: auto;
     margin-right: auto;
+  }
+  p{
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  h1{
+    font-size: 36px;
   }
 }
 
@@ -276,4 +341,17 @@ body:not(.home) main.site-main {
  img {
    max-width: 100%;;
  }
+}
+.site_footer {
+  .site_footer_inner{
+    .footer_section{
+      .list_item{
+        .item{
+          a{
+            font-family: 'BrandonGrotesque-Medium', sans-serif !important;
+          }
+        }
+      }
+    }
+  }
 }
