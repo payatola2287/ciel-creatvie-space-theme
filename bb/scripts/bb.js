@@ -80,4 +80,13 @@ const clickFirstLink = (e) => {
       
     }, 500);
   });
+  $('.flexible_logo_carousel_content .logo-carousel').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: false,
+      arrows: false,
+      centerMode: true,
+      autoplay: true,
+      variableWidth: true
+  });
 })(window.jQuery);
