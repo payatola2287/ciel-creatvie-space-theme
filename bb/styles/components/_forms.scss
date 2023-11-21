@@ -71,10 +71,31 @@
         width: 50%;
         float: left;
       }
+      
+      
     }
   }
 
   .gravirty_form_section .gform_wrapper form .gform_body .gform_fields .gfield .gfield_label .gfield_required {
     display: inline;
+  }
+  
+}
+.gravirty_form_section{
+  .gform_wrapper{
+    form{
+      .gform_body{
+        .gform_fields{
+          grid-gap: 2rem;
+          .gfield{
+            &.gfield--width-half{
+              @media (min-width: 980px){
+                width: calc(50% - 2rem);
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
