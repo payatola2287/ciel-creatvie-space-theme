@@ -6,7 +6,7 @@ $heading = get_sub_field('heading');
     <div class="event_list">
         <div class="container">
             <div class="event_list__inner">
-                <?php if ($heading) : ?><h5 class="heading"><?php echo $heading; ?></h5><?php endif; ?>
+                <?php if ($heading) : ?><h5 class="heading _sectionTitle _sectionTitle--repeated" data-title="<?php echo $heading; ?>" style="text-align: left; font-weight: bold;"><?php echo $heading; ?></h5><?php endif; ?>
                 <div class="event_list__list">
                     <?php foreach ($select_event as $key => $postId) {
                         $title = get_the_title($postId);
@@ -37,7 +37,7 @@ $heading = get_sub_field('heading');
                         <div class="event_list__item <?php if($show_as_upcoming) echo "--upcoming" ?>" data-aos="fade-in" data-aos-duration="2000">
                             <div class="event_image">
                                 <?php if($show_as_upcoming) { ?>
-                                    <div class="section-title section-title--repeated">
+                                    <div class="section-title section-title--repeated ">
                                         <strong class="_sectionTitle _sectionTitle--repeated" data-title="Upcoming">
                                             Upcoming
                                         </strong>

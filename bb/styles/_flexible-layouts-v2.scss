@@ -1,15 +1,6 @@
 $min-width: 980px;
 $md-width: 768px;
-.page-template-tech-event-landing-page{
-    #primary{
-        > div{
-            background: #fafafa;
-        }
-        .video-section{
-            margin-bottom: 0;
-        }
-    }
-}
+
 .flexible_content_container{
     max-width: 90vw;
     margin: 0 auto;
@@ -26,7 +17,7 @@ $md-width: 768px;
         font-family: var(--font__headline--fontFamily);
         text-align: center;
         font-weight: 400;
-        line-height: 1;
+        line-height: 1.25;
     }
     .text-1{
         margin: 10rem 0 0;
@@ -327,4 +318,26 @@ $md-width: 768px;
         display: inline-block;
         margin: 0 auto;
     }
+}
+.section_1{
+    .flexible_two_line_text{
+        padding-top: 3rem;
+        .text-1{
+            margin-top: 3rem;
+        }
+    }
+}
+.page-template-tech-event-landing-page{
+    #primary{
+        > div{
+            background: #fafafa;
+        }
+        .video-section{
+            margin-bottom: 0;
+        }
+    }
+    .flexible_accent_text{
+        padding: 10rem 0 4.7rem;
+    }
+    
 }

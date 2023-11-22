@@ -2233,13 +2233,6 @@ body, #page {
   max-width: 75vw;
 }
 
-.page-template-tech-event-landing-page #primary > div {
-  background: #fafafa;
-}
-.page-template-tech-event-landing-page #primary .video-section {
-  margin-bottom: 0;
-}
-
 .flexible_content_container {
   max-width: 90vw;
   margin: 0 auto;
@@ -2260,7 +2253,7 @@ body, #page {
   font-family: var(--font__headline--fontFamily);
   text-align: center;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.25;
 }
 .flexible_two_line_text .text-1 {
   margin: 10rem 0 0;
@@ -2585,6 +2578,23 @@ body, #page {
 .button-wrapper a {
   display: inline-block;
   margin: 0 auto;
+}
+
+.section_1 .flexible_two_line_text {
+  padding-top: 3rem;
+}
+.section_1 .flexible_two_line_text .text-1 {
+  margin-top: 3rem;
+}
+
+.page-template-tech-event-landing-page #primary > div {
+  background: #fafafa;
+}
+.page-template-tech-event-landing-page #primary .video-section {
+  margin-bottom: 0;
+}
+.page-template-tech-event-landing-page .flexible_accent_text {
+  padding: 10rem 0 4.7rem;
 }
 
 /*# sourceMappingURL=bb.min.css.map */

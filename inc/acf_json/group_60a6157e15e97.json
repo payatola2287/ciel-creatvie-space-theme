@@ -208,6 +208,13 @@
                 "operator": "==",
                 "value": "event"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "tech-event-landing-page.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -232,5 +239,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1686183260
+    "modified": 1700678740
 }
