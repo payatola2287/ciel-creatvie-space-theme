@@ -19,7 +19,7 @@ $link_2 = array_replace_recursive(array(
         
         <div class="full_image_heading__inner">
             <div class="full_image_heading__image" style="background-image: url('<?php echo $image['url']; ?>'); ">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/1600x780.png" alt="<?php echo $image['alt']; ?>" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/1600x780.png" alt="<?php echo $image['alt']; ?>" width="1600" height="780"/>
             </div>
             <div class="middle_text">
                 <div class="middle_text_inner"  data-aos="fade-in" data-aos-duration="2000">

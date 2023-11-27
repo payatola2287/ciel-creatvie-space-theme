@@ -117,7 +117,7 @@ if( $show_banner == true ):
 		
 		<?php if( $show_logo == true ): ?>
 		<div class="banner_logo">
-			<img src="<?php echo $image_url; ?>" alt="" />
+			<img src="<?php echo $image_url; ?>" alt="Ciel Creative Space Logo"  height="116" width="116"/>
 		</div>
 		<?php endif; ?>
 	</div>

@@ -82,8 +82,8 @@ if($cta_button['url'] && str_contains($cta_button['url'], '/book-now')) {
                                 <source src="<?php echo $video; ?>" type="video/mp4">
                             </video>
                             <button class="btn-audio">
-                                <img src="<?php echo get_template_directory_uri() . '/assets/images/icon-volume.svg'; ?>" alt="" class="on">
-                                <img src="<?php echo get_template_directory_uri() . '/assets/images/icon-mute.svg'; ?>" alt="" class="off">
+                                <img src="<?php echo get_template_directory_uri() . '/assets/images/icon-volume.svg'; ?>" alt="" height="33" width="33" class="on">
+                                <img src="<?php echo get_template_directory_uri() . '/assets/images/icon-mute.svg'; ?>" height="33" width="33" alt="" class="off">
                             </button>
                         </div>
                     <?php } ?>

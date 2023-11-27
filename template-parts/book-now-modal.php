@@ -12,7 +12,7 @@ extract(array_replace_recursive(array(
   <div class="_ciel__modal__inner">
     <div class="_ciel__modal__header">
       <span class="_ciel__modal__logo" data-action="modal--close">
-        <img src="<?php echo get_template_directory_uri(); ?>/bb/assets/logo.png" alt="Ciel Creative Space">
+        <img src="<?php echo get_template_directory_uri(); ?>/bb/assets/logo.png" alt="Ciel Creative Space" height="45" width="45">
       </span>
       <!-- /._ciel__modal__logo -->
       <?php if ($title): ?>
