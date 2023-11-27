@@ -342,6 +342,17 @@ body:not(.home) main.site-main {
    max-width: 100%;;
  }
 }
+.join-section{
+  .join-section-inner{
+    figure{
+      img{
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        
+      }
+    }
+  }
+}
 .site_footer {
   .site_footer_inner{
     .footer_section{
