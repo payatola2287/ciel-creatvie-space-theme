@@ -43,7 +43,7 @@
 			<?php } ?>
 		</div>
 	</div>
-	<?php if($promo_image){ ?><span class="promo-icon"><img src="<?php echo $promo_image ?>"><p><?php echo $logo_tagline ?></p></span><?php } ?>
+	<?php if($promo_image){ ?><span class="promo-icon"><img src="<?php echo $promo_image ?>" alt="Ciel Creative Space Promo" width="57" height="38"><p><?php echo $logo_tagline ?></p></span><?php } ?>
 </div>	
 <footer class="site_footer" id="footer_content">
 	<div class="container">
@@ -55,7 +55,7 @@
 						$footer_logo_alt = $footer_logo['alt'];
 					?>
 						<a href="<?php echo site_url(); ?>">
-							<img src="<?php echo $footer_logo_url; ?>" alt="<?php echo $footer_logo_alt; ?>">
+							<img src="<?php echo $footer_logo_url; ?>" alt="<?php echo $footer_logo_alt; ?>" width="116">
 						</a>
 					<?php } ?>
 				</div>
