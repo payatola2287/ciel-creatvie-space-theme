@@ -36,6 +36,7 @@
     "map": false
   },
   "scripts": {
+    "uglify-bb": "uglifyjs bb/scripts/bb.js -o bb/scripts/bb-min.js --source-map",
     "sass-watch": "sass --watch bb/styles/bb.scss bb/styles/bb.min.css && postcss bb/styles/bb.min.css --replace --use autoprefixer",
     "watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
     "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
