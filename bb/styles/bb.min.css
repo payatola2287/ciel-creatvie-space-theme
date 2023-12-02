@@ -318,6 +318,34 @@ body.--modal--open ._ciel__modal__footer {
   pointer-events: all;
 }
 
+body.--mmodal--open .promo-box {
+  opacity: 0 !important;
+}
+body.--mmodal--open ._ciel__mmodal {
+  pointer-events: all;
+  opacity: 1;
+  backdrop-filter: blur(50px);
+  background: rgba(255, 255, 255, 0.5);
+  --basePX: 1;
+}
+@media screen and (max-width: 1050px) {
+  body.--mmodal--open ._ciel__mmodal {
+    --basePX: calc(100vw / 1050px * 10);
+  }
+}
+body.--mmodal--open ._ciel__mmodal * {
+  pointer-events: all !important;
+}
+body.--mmodal--open ._ciel__mmodal__inner {
+  opacity: 1;
+  transition-delay: 150ms;
+  transform: scale(1);
+}
+body.--mmodal--open ._ciel__mmodal__footer {
+  user-select: all;
+  pointer-events: all;
+}
+
 ._ciel__modal {
   position: fixed;
   top: 0;
@@ -2600,6 +2628,138 @@ body, #page {
 }
 .page-template-tech-event-landing-page .flexible_accent_text {
   padding: 10rem 0 4.7rem;
+}
+
+.flexible_logo_carousel_content {
+  position: relative;
+  height: 75vh;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+@media (min-width: 980px) {
+  .flexible_logo_carousel_content {
+    margin-bottom: 5rem;
+  }
+}
+@media (min-width: 1400px) {
+  .flexible_logo_carousel_content {
+    margin-bottom: 7rem;
+  }
+}
+.flexible_logo_carousel_content .backdrop {
+  height: 100%;
+  width: 50%;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  transform: translate(0, -50%);
+  transition: transform 1s ease-in-out;
+}
+.flexible_logo_carousel_content .backdrop.left-panel {
+  left: 0;
+}
+.flexible_logo_carousel_content .backdrop.right-panel {
+  right: 0;
+}
+.flexible_logo_carousel_content .front-panel {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+@media (min-width: 980px) {
+  .flexible_logo_carousel_content .front-panel {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+.flexible_logo_carousel_content .front-panel .lead-text {
+  color: #fff;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1.6rem;
+}
+@media (min-width: 980px) {
+  .flexible_logo_carousel_content .front-panel .lead-text {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+@media (min-width: 1680px) {
+  .flexible_logo_carousel_content .front-panel .lead-text {
+    font-size: 2rem;
+  }
+}
+.flexible_logo_carousel_content .front-panel .open-trigger {
+  display: block;
+  text-align: right;
+}
+.flexible_logo_carousel_content .front-panel .open-trigger svg {
+  fill: #fff;
+  height: 3.2rem;
+  width: 3.2rem;
+  cursor: pointer;
+}
+.flexible_logo_carousel_content .front-panel .lead-title {
+  color: #fff;
+  font-size: clamp(4.8rem, 6vw, 8.4rem);
+}
+@media (min-width: 980px) {
+  .flexible_logo_carousel_content .front-panel .lead-title {
+    text-align: center;
+  }
+}
+.flexible_logo_carousel_content .back-panel {
+  max-width: 133.7rem;
+  margin: 0 auto;
+  display: grid;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out 300ms;
+}
+@media (min-width: 980px) {
+  .flexible_logo_carousel_content .back-panel {
+    grid-template-columns: 50% 50%;
+    grid-gap: 3rem;
+  }
+}
+.flexible_logo_carousel_content .back-panel .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  align-items: flex-start;
+  font-family: var(--font__body--fontFamily) !important;
+  font-size: 2rem;
+}
+.flexible_logo_carousel_content .back-panel .content .heading {
+  margin: 0 0;
+}
+.flexible_logo_carousel_content .back-panel .content *:not(.heading) {
+  font-family: inherit !important;
+}
+.flexible_logo_carousel_content .back-panel .content a {
+  margin-top: 3rem;
+}
+.flexible_logo_carousel_content .back-panel .graphic img {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.flexible_logo_carousel_content.open .front-panel {
+  opacity: 0;
+  z-index: -1;
+}
+.flexible_logo_carousel_content.open .back-panel {
+  opacity: 1;
+}
+.flexible_logo_carousel_content.open .left-panel {
+  transform: translate(-95%, -50%);
+}
+.flexible_logo_carousel_content.open .right-panel {
+  transform: translate(95%, -50%);
 }
 
 /*# sourceMappingURL=bb.min.css.map */

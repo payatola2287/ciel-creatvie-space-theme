@@ -32,7 +32,40 @@ body.--modal--open {
     pointer-events: all;
   }
 }
+body.--mmodal--open {
+  .promo-box {
+    opacity: 0 !important;
+  }
 
+  ._ciel__mmodal {
+    pointer-events: all;
+    opacity: 1;
+    backdrop-filter: blur(50px);
+    background: rgba(255, 255, 255, .5);
+
+    --basePX: 1;
+
+    @media screen and (max-width: 1050px) {
+      --basePX: calc(100vw / 1050px * 10);
+    }
+
+    * {
+      pointer-events: all !important;
+    }
+  }
+
+
+  ._ciel__mmodal__inner {
+    opacity: 1;
+    transition-delay: 150ms;
+    transform: scale(1);
+  }
+
+  ._ciel__mmodal__footer { 
+    user-select: all;
+    pointer-events: all;
+  }
+}
 
 ._ciel__modal {
   position: fixed;

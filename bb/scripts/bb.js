@@ -21,6 +21,24 @@ const modal__toggle = (e) => {
   document.querySelector('body').classList.toggle('--modal--open');
 }
 
+// Modal Open
+const mmodal__open = (e) => {
+  _e(e);
+  document.querySelector('body').classList.add('--mmodal--open');
+}
+
+// Modal Close
+const mmodal__close = (e) => {
+  _e(e);
+  document.querySelector('body').classList.remove('--mmodal--open');
+}
+
+// Modal Toggle
+const mmodal__toggle = (e) => {
+  _e(e);
+  document.querySelector('body').classList.toggle('--mmodal--open');
+}
+
 // Set Hero Height
 const setHeroHeight = () => {
   const heroText = document.querySelector('#heroBanner + .section_1');
@@ -53,6 +71,9 @@ const clickFirstLink = (e) => {
 (($) => {
   $(document).ready(() => {
     // Bind Events
+    $('[data-action="mmodal--open"]').on('click', mmodal__open);
+    $('[data-action="mmodal--close"]').on('click', mmodal__close);
+    $('[data-action="mmodal--toggle"]').on('click', mmodal__toggle);
     $('[data-action="modal--open"]').on('click', modal__open);
     $('[data-action="modal--close"]').on('click', modal__close);
     $('[data-action="modal--toggle"]').on('click', modal__toggle);
@@ -88,5 +109,8 @@ const clickFirstLink = (e) => {
       centerMode: true,
       autoplay: true,
       variableWidth: true
+  });
+  $('.flexible_logo_carousel_content').hover(function(){
+    $(this).addClass('open');
   });
 })(window.jQuery);
