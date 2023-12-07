@@ -93,8 +93,21 @@
                 width: calc(50% - 2rem);
               }
             }
+            .ginput_container.ginput_container_checkbox{
+              .gfield_checkbox{
+                .gchoice {
+                  [type=checkbox]:not(:checked)+label,
+                  [type=checkbox]:checked+label{
+                    @media (max-width: 979px){
+                      height: auto;
+                    }
+                  }
+                }
+              }
+            }
           }
         }
+        
       }
     }
   }

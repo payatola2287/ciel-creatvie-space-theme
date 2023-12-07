@@ -792,6 +792,12 @@ body.--mmodal--open ._ciel__mmodal__footer {
     width: calc(50% - 2rem);
   }
 }
+@media (max-width: 979px) {
+  .gravirty_form_section .gform_wrapper form .gform_body .gform_fields .gfield .ginput_container.ginput_container_checkbox .gfield_checkbox .gchoice [type=checkbox]:not(:checked) + label,
+  .gravirty_form_section .gform_wrapper form .gform_body .gform_fields .gfield .ginput_container.ginput_container_checkbox .gfield_checkbox .gchoice [type=checkbox]:checked + label {
+    height: auto;
+  }
+}
 
 .__form_wrapper.gform_wrapper {
   max-width: 1120px;
@@ -1449,11 +1455,6 @@ pre {
   }
   .gfield_label + .ginput_container {
     padding-top: 15px;
-  }
-}
-@media screen and (max-width: 640px) {
-  .ginput_complex label {
-    text-align: center !important;
   }
 }
 .gfield--reducespace {
