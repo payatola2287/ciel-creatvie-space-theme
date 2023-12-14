@@ -31,9 +31,20 @@ get_header();
                 //https://www.youtube-nocookie.com/embed/p5hNxBxnzdw?si=5R-sdn9_MgEQ59Mv&amp;controls=0
             ?>
             <iframe src="<?php echo $video_url; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            
             <a href="<?php echo $button['url']; ?>" class="expand-text btn btn--transparent"><?php echo $button['title']; ?><i></i></a>
         </section>
+        <?php
+            if( have_rows('flexible_content') ):
+                while ( have_rows('flexible_content') ) : the_row(); 
+                set_query_var( 'section_id', get_row_index() );
+                ?>
+                    <div class="section section_<?php echo get_row_index(); ?> " id="<?php echo get_row_layout(); ?>_<?php echo get_row_index(); ?>">
+                        <?php get_template_part('flexible/content', get_row_layout()); ?>
+                    </div>
+                    <?php 
+                endwhile;
+            endif
+        ?>
 	</main><!-- #main -->
     <section class="overlay">
         <div class="content-text">
@@ -68,7 +79,7 @@ get_header();
             <?php
                 endif;
             ?>
-            <img src="https://cielcreativespace.com/wp-content/uploads/2021/05/logo.svg" alt="CIEL" width="116" height="116" />
+            <img src="https://cielcreativespace.com/wp-content/uploads/2023/12/ciel-logo-white.png" alt="CIEL" class="brand-logo"/>
             <span class="expand-text l-text">Click anywhere to watch video</span>
         </div>
         
