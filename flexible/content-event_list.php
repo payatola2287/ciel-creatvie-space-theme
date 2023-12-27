@@ -39,7 +39,7 @@ $heading = get_sub_field('heading');
                                 <?php if($show_as_upcoming) { ?>
                                     <div class="section-title section-title--repeated ">
                                         <strong class="_sectionTitle _sectionTitle--repeated" data-title="Upcoming">
-                                            Upcoming
+                                            Coming Soon
                                         </strong>
                                     </div>
                                 <?php } ?>
