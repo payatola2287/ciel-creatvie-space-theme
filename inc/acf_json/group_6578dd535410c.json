@@ -157,6 +157,26 @@
                     "parent_repeater": "field_6578de9b4c697"
                 }
             ]
+        },
+        {
+            "key": "field_657cd7d316ec2",
+            "label": "Native Video",
+            "name": "native_video",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -177,5 +197,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1702421497
+    "modified": 1702680697
 }

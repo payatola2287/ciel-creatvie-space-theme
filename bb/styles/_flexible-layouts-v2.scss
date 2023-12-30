@@ -464,3 +464,35 @@ $md-width: 768px;
         }
     }
 }
+.flexible_single_studio{
+    max-width: 992px;
+    padding: 2rem;
+    border: 0.4rem solid #000;
+    margin: 2rem auto;
+    font-size: 1.6rem;
+    @media (min-width: 992px){
+        font-size: 2rem;
+    }
+    .imagery{
+        display:grid;
+        grid-template-columns: 50% 50%;
+        .floorplan-wrapper,
+        .photo-wrapper{
+            img{
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+    .studio-name{
+        text-align: center;
+    }
+    .studio-terms{
+        display: flex;
+        justify-content: center;
+        font-family: var(--font__body--fontFamily);
+    }
+    p{
+        text-align: center;
+    }
+}

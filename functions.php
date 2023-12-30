@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.2.15' );
+	define( '_S_VERSION', '1.2.22' );
 }
 
 if ( ! function_exists( 'ciel_setup' ) ) :
@@ -144,8 +144,13 @@ function ciel_widgets_init() {
 function ciel_scripts() {
 	$theme_data = wp_get_theme();
 	$cache_buster = $theme_data->get('Version');
+	
 	wp_enqueue_style( 'ciel-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'ciel-style', 'rtl', 'replace' );
+
+	if( is_page_template( 'unspan-template.php' ) ){
+		wp_enqueue_script( 'youtube-iframe-api', 'https://www.youtube.com/iframe_api', array(), _S_VERSION, true );
+	}
 
 	wp_enqueue_script( 'ciel-navigation', get_template_directory_uri() . '/js/navigation.min.js', array('jquery'), _S_VERSION, true );
 	wp_enqueue_script( 'ciel-js', get_template_directory_uri() . '/dist/js/js.min.js', array('jquery'), _S_VERSION, true );
@@ -158,7 +163,6 @@ function ciel_scripts() {
 	/* if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	} */
-
 }
 add_action( 'wp_enqueue_scripts', 'ciel_scripts' );
 

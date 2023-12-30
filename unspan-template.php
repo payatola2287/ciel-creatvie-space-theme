@@ -30,7 +30,18 @@ get_header();
                 endif;
                 //https://www.youtube-nocookie.com/embed/p5hNxBxnzdw?si=5R-sdn9_MgEQ59Mv&amp;controls=0
             ?>
-            <iframe src="<?php echo $video_url; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <?php if( $native_video_file = get_field( 'native_video' ) ): ?>
+                <?php
+                    //bb_print_r( $native_video_file );
+                ?>
+                <video id="video-player" controls>
+                    <source src="<?php echo $native_video_file['url']; ?>" type="<?php echo $native_video_file['mime_type']; ?>">
+                    Your browser does not support the video tag.
+                </video>
+            <?php else: ?>
+                <iframe id="yt-player" src="<?php echo $video_url . '&enablejsapi=1'; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <?php endif; ?>
+
             <a href="<?php echo $button['url']; ?>" class="expand-text btn btn--transparent"><?php echo $button['title']; ?><i></i></a>
         </section>
         <?php
@@ -48,6 +59,7 @@ get_header();
 	</main><!-- #main -->
     <section class="overlay">
         <div class="content-text">
+        <img src="https://cielcreativespace.com/wp-content/uploads/2023/12/ciel-logo-white.png" alt="CIEL" class="brand-logo"/>
             <?php 
                 if( have_rows( 'overlay_text' ) ):
                     while( have_rows( 'overlay_text' ) ):
@@ -79,10 +91,14 @@ get_header();
             <?php
                 endif;
             ?>
-            <img src="https://cielcreativespace.com/wp-content/uploads/2023/12/ciel-logo-white.png" alt="CIEL" class="brand-logo"/>
+            
             <span class="expand-text l-text">Click anywhere to watch video</span>
         </div>
         
     </section>
+    <?php
+    var_dump( is_page_template( 'unspan-template.php' ) );
+    ?>
 <?php
+
 get_footer();

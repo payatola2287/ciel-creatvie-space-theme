@@ -25,7 +25,7 @@
     </section>
     
 </div>
-<div class="_ciel__mmodal _ciel__modal">
+<div class="_ciel__mmodal _ciel__modal" id="reveal_modal">
   <div class="_ciel__modal__overlay" data-action="mmodal--close"></div>
   <div class="_ciel__mmodal__inner _ciel__modal__inner">
     <div class="_ciel__modal__header">

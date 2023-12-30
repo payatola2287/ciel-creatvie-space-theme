@@ -68,6 +68,7 @@ const clickFirstLink = (e) => {
 }
 
 
+
 (($) => {
   $(document).ready(() => {
     // Bind Events
@@ -86,17 +87,28 @@ const clickFirstLink = (e) => {
 
     if(window.location.hash === '#book') {
       $('[data-action="modal--open"]')[0].click();
+    }else if( window.location.hash === '#studio-zero-membership' ){
+      $( '[data-action="mmodal--open"]' ).click();
     }
     
     setTimeout(() => {
       $('.page-template-unspan-template .content-text').addClass( 'open' );
-      $('.page-template-unspan-template .overlay').click(function(){
+      $('.page-template-unspan-template .overlay').on('click tap',function(){
         $content_text = $(this);
         $content_text.animate({
           opacity: 0
         }, 1000,function(){
           $content_text.remove();
         });
+        if( $( '#yt-player' ).length ){
+          let iFrameDataSrc = $('#yt-player').data('src');
+          let iFrameSrc = iFrameDataSrc || $( '#yt-player' ).attr('src');
+          console.log(iFrameSrc);
+          $('#yt-player').attr( 'src', iFrameSrc + '&autoplay=1' );
+        }
+        if( $( '#video-player' ).length ){
+          $( '#video-player' ).get(0).play();
+        }
       });
       
     }, 500);
@@ -113,4 +125,32 @@ const clickFirstLink = (e) => {
   $('.flexible_logo_carousel_content').hover(function(){
     $(this).addClass('open');
   });
+
+  
+
+  $('[data-tab-toggle]').on( 'click', function(){
+    $contentPane = $(this).data('content');
+    $(this)
+      .addClass('open')
+      .siblings('[data-tab-toggle]')
+        .removeClass('open');
+    $($contentPane)
+      .addClass('open')
+      .siblings('[tab-content]')
+        .removeClass('open');
+  } );
+
+  // gform.addFilter( 'gform_datepicker_options_pre_init', function( optionsObj, formId, fieldId ) {
+  //     if ( formId == 10 && fieldId == 1 ) {
+  //       optionsObj.firstDay = 1;
+  //       optionsObj.beforeShowDay = function (date) {
+  //           var disabledDays = ['12/25/2023', '12/26/2023', '12/28/2023', '01/01/2024', '01/02/2024', '01/03/2024'],
+  //               currentDate = jQuery.datepicker.formatDate('mm/dd/yy', date),
+  //               day = date.getDay();
+  
+  //           return [!(disabledDays.indexOf(currentDate) != -1 || day == 3)];
+  //       };
+  //     }
+  //     return optionsObj;
+  // });
 })(window.jQuery);

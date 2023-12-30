@@ -4,12 +4,14 @@ $font-family-serif: Lust-Regular;
 $font-family-sans: BrandonGrotesque-Medium;
 $transition-duration: 0.86s;
 $transition-anim: ease-in-out;
+$dim-limit: 5.3vw;
 .page-template-unspan-template{
     margin: 0;
     min-height: 100%;
     background-color: $light;
     color: $dark;
-    font-size: 1.5vw;
+    // font-size: 1.5vw;
+    font-size: clamp(1.8rem, 1.6vw, 2.5rem);
     line-height: 2vw;
     font-weight: 400;
     text-decoration: none;
@@ -104,13 +106,20 @@ $transition-anim: ease-in-out;
     }
     .scattered-banner{
         position: relative;
-        margin: 25vh auto;
-        height: 56.25vh;
+        margin: 17vh auto 5vh;
+        height: 35vh;
         width: 90vw;
         text-align: center;
-        @media (min-width: 980px){
-            height: 75vh;
+        @media (min-width: 480px){
+            height: 35vh;
+        }
+        @media (min-width: 992px){
+            height: 55vh;
             width: 65vw;
+            margin: 25vh auto 5vh;
+        }
+        @media (min-width: 1200px){
+            height: 75vh;
         }
         a{
             color: $dark;
@@ -118,7 +127,8 @@ $transition-anim: ease-in-out;
         video,
         iframe{
             width: 100%;
-            height: 100%;
+            height: auto;
+            margin-bottom: 3rem;
         }
         .text-span{
             position: absolute;
@@ -127,19 +137,35 @@ $transition-anim: ease-in-out;
             color: $light;
             mix-blend-mode: difference;
             font-family: $font-family-serif;
+            line-height: 1.05;
+            display: none;
             &.text-top{
-                top: -1.125rem;
+                top: -$dim-limit;
                 left: 50%;
                 transform: translate(-50%, 0);
             }
+            &.text-mid,
+            &.text-bottom{
+                position: absolute;
+                -webkit-writing-mode: vertical-rl;
+                -ms-writing-mode: tb-rl;
+                writing-mode: vertical-rl;
+                -webkit-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
             &.text-mid{
-                top: 50%;
-                left: -6.25rem;
-                transform: translate(0, -50%);
+                margin-top: 0;
+                margin-bottom: 0;
+                top: 0;
+                left: -$dim-limit;
+                
             }
             &.text-bottom{
-                right: 0;
-                top: 100%;
+                margin-top: 0;
+                margin-bottom: 0;
+                top: 50%;
+                right: -$dim-limit;
             }
         }
     }
